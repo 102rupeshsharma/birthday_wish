@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe0f0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgb(234, 252, 186);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  transform: rotate(90deg);
+}
+
+h1 {
+  font-size: 32px;
+  color: #ff2d95;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.gift-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-10px, -10px) rotate(-5deg); }
+  50% { transform: translate(10px, -15px) rotate(5deg); }
+  75% { transform: translate(-5px, 10px) rotate(-3deg); }
+}
+
+/* Stars / decorations */
+.star {
+  position: absolute;
+  font-size: 24px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.star1 { top: 10px; left: 10px; animation-delay: 0s; }
+.star2 { top: 50px; right: 20px; animation-delay: 0.5s; }
+.star3 { bottom: 40px; left: 30px; animation-delay: 1s; }
+.star4 { bottom: 10px; right: 10px; animation-delay: 1.5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-20px); opacity: 0.7; }
+}
+
+.gift-card img {
+  border-radius: 20px;
+  width: 90%;
+  height: 300px;
+  background-color: orange;
+}
+
+/* Small phones */
+@media (max-width: 360px) and (min-width: 414px) {
+  .gift-card img {
+    max-width: 90%;
+  }
+}
